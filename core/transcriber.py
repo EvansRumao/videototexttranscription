@@ -15,7 +15,7 @@ def load_model(model_name: str):
 #in this function we will transcribe a single audio chunk using the whisper model and return the transcription as a string
 #transcribe is the default task which will transcribe the audio in the original language, while translate will translate the audio to english and then transcribe it
 def transcribe_chunk(chunk_path: str,translate: bool=False) -> str:
-    model = load_model()
+    model = load_model(whisper_model)
     task = "translate" if translate else "transcribe"
 
     result = model.transcribe(chunk_path, task=task) 

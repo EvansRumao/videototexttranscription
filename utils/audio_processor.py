@@ -38,11 +38,11 @@ def convert_to_wav(input_path: str)-> str:
     return output_path
 
 
-data=download_youtube_audio("https://www.youtube.com/watch?v=HQmm4IJbguI")
+# data=download_youtube_audio("https://www.youtube.com/watch?v=HQmm4IJbguI")
 
-converted_file=convert_to_wav(data)
+# converted_file=convert_to_wav(data)
 
-print(f"Audio downloaded and converted to wav format: {converted_file}")
+# print(f"Audio downloaded and converted to wav format: {converted_file}")
 
 
 def chunk_audio(input_path: str, chunk_minutes: int = 10) -> list:
@@ -56,7 +56,7 @@ def chunk_audio(input_path: str, chunk_minutes: int = 10) -> list:
         chunks.append(chunk_path)
     return chunks
 
-chunk_audio(converted_file)
+#   chunk_audio(converted_file)
 
 
 def process_input(source: str) -> list:
